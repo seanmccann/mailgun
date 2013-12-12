@@ -61,6 +61,10 @@ module Mailgun
     def list_members(address)
       Mailgun::MailingList::Member.new(self, address)
     end
+
+    def campaigns(domain = Mailgun.domain)
+      Mailgun::Campaign.new(self, domain)
+    end
   end
 
 
